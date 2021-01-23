@@ -1,10 +1,14 @@
 const video = document.getElementById("video");
 
 Promise.all([
-  faceapi.nets.tinyFaceDetector.loadFromUri("/models"),
-  faceapi.nets.faceLandmark68Net.loadFromUri("/models"),
-  faceapi.nets.faceRecognitionNet.loadFromUri("/models"),
-  faceapi.nets.faceExpressionNet.loadFromUri("/models"),
+  // faceapi.nets.tinyFaceDetector.loadFromUri("/models"),
+  // faceapi.nets.faceLandmark68Net.loadFromUri("/models"),
+  // faceapi.nets.faceRecognitionNet.loadFromUri("/models"),
+  // faceapi.nets.faceExpressionNet.loadFromUri("/models"),
+  faceapi.nets.tinyFaceDetector.loadFromUri("/ai-face-recognition/models"),
+  faceapi.nets.faceLandmark68Net.loadFromUri("/ai-face-recognition/models"),
+  faceapi.nets.faceRecognitionNet.loadFromUri("/ai-face-recognition/models"),
+  faceapi.nets.faceExpressionNet.loadFromUri("/ai-face-recognition/models"),
 ]).then(startVideo);
 
 function startVideo() {
